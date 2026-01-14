@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+client/node_modules
+server/node_modules
+
+# Private Environment Data / PWs / JWT keys ...
+.env
+server/.env
+
+# Build Outputs / React compiled files
+dist/
+client/dist/
+build/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
