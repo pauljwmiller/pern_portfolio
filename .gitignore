@@ -5,18 +5,27 @@ server/node_modules
 
 # Private Environment Data / PWs / JWT keys ...
 .env
+.env.local
+.env.*.local
+client/.env
 server/.env
+db
 
 # Build Outputs / React compiled files
 dist/
 client/dist/
 build/
+client/build/
 
 # Debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# OS Files
+# --- IDE & System Files ---
+.vscode/
+.idea/
 .DS_Store
 Thumbs.db
+
+# *.sql
