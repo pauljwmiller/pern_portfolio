@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+**/node_modules/
 client/node_modules
 server/node_modules
 
@@ -9,7 +10,6 @@ server/node_modules
 .env.*.local
 client/.env
 server/.env
-db.js
 
 # Build Outputs / React compiled files
 dist/
@@ -28,4 +28,4 @@ yarn-error.log*
 .DS_Store
 Thumbs.db
 
-# *.sql
+*.sql
