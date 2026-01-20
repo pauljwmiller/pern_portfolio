@@ -78,7 +78,7 @@ function App() {
                   height="50px"
                 />
               </a></h2>
-              <h2><a href="" className='active-link'>
+              <h2><a href="https://pmiller-brmc.github.io/" className='active-link'>
                 <p>GIS Project for Blue Ridge Medical Center</p>
                 <img
                   src="https://www.brmedical.org/wp-content/uploads/2023/11/BRMC-logo-blue-white-icon.png"
