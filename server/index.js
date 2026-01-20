@@ -1,11 +1,13 @@
 const express = require("express");
-const app = express(); //runs express libraries
+const app = express();
 const cors = require("cors");
 const pool = require("./db");
+const path = require("path"); // needed for file paths
 
 //middleware
 app.use(cors());
-app.use(express.json()); // gives access to req.body to give us json data
+app.use(express.json()); 
+app.use(express.static(path.join(__dirname, "../client/dist"))); // serves static frontend
 
 //ROUTES
 app.post("/items", async(req, res) => {
@@ -22,7 +24,13 @@ app.post("/items", async(req, res) => {
     }
 })
 
-app.listen(5000, () => {
-    console.log("server has started on port 5000")
+// handles client-side routing
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 });
 
+// dynamic port for deployment
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`server has started on port ${PORT}`)
+});
