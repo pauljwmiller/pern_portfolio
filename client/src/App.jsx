@@ -40,6 +40,9 @@ function App() {
               If there are any available opportunities that may allow me to apply my efforts to your organization, please let me know!
               I look forward to hearing from you!
             </p>
+              <a href="mailto:pauljwmiller@gmail.com">
+              Send an email to pauljwmiller@gmail.com
+              </a>
             </section>)
           }
 
@@ -86,6 +89,15 @@ function App() {
                   width="75px"
                   height="50px"
                 />
+              </a></h2>
+              <h2><a href="mailto:pauljwmiller@gmail.com" className='active-link'>
+                <p>Email</p>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/542/542689.png"
+                  alt = "Email Icon"
+                  width="50px"
+                  height="50px"
+                  />
               </a></h2>
             </section>
           )
