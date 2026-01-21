@@ -2,12 +2,15 @@ import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
+import BouncingBallsCanvas from "./components/BouncingBallsCanvas";
+
 
 function App() {
   const [view, setView] = useState('home');
 
   return (
     <>
+      <BouncingBallsCanvas key={view} />
       <div className = 'portfolio'>
         <nav>
           <button onClick={() => setView('home')}>Home</button>
@@ -19,8 +22,8 @@ function App() {
         <main className='main-content'>
           {view === 'home' && (
             <section className='intro'>
-              <h1>It's nice to meet you!</h1>
-              <h2> I'm Paul Miller. Feel free to look around for info about me!</h2>
+              <h2>It's nice to meet you! I'm Paul Miller.</h2>
+              <h3>Feel free to look around for information about me!</h3>
             </section>) 
             }
           
@@ -55,8 +58,8 @@ function App() {
               <embed
                 src = "/resume.pdf"
                 type="application/pdf"
-                width="150%"
-                height='620px'
+                width="500vh"
+                height="620vh"
               />
             </section>)
           }
@@ -68,8 +71,8 @@ function App() {
                 <img 
                   src="https://cdn-icons-png.flaticon.com/512/25/25231.png" 
                   alt="GitHub Logo" 
-                  width="50px"
-                  height="50px"
+                  width="50vw"
+                  height="50vh"
                 />
               </a></h2>
               <h2><a href="https://www.linkedin.com/in/paul-miller-841907246/" className='active-link'>
@@ -77,8 +80,8 @@ function App() {
                 <img 
                   src="https://cdn-icons-png.flaticon.com/512/174/174857.png" 
                   alt="LinkedIn Logo" 
-                  width="50px"
-                  height="50px"
+                  width="50vw"
+                  height="50vh"
                 />
               </a></h2>
               <h2><a href="https://pmiller-brmc.github.io/" className='active-link'>
@@ -86,8 +89,8 @@ function App() {
                 <img
                   src="https://www.brmedical.org/wp-content/uploads/2023/11/BRMC-logo-blue-white-icon.png"
                   alt="Blue Ridge Medical Center Logo"
-                  width="75px"
-                  height="50px"
+                  width="75vw"
+                  height="50vh"
                 />
               </a></h2>
               <h2><a href="mailto:pauljwmiller@gmail.com" className='active-link'>
@@ -95,8 +98,8 @@ function App() {
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/542/542689.png"
                   alt = "Email Icon"
-                  width="50px"
-                  height="50px"
+                  width="50vw"
+                  height="50vh"
                   />
               </a></h2>
             </section>
