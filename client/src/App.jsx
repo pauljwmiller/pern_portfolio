@@ -22,8 +22,8 @@ function App() {
         <main className='main-content'>
           {view === 'home' && (
             <section className='intro'>
-              <h2>It's nice to meet you! I'm Paul Miller.</h2>
-              <h3>Feel free to look around for information about me!</h3>
+              <h1>It's nice to meet you! I'm Paul Miller.</h1>
+              <h2>Feel free to look around for information about me!</h2>
             </section>) 
             }
           
@@ -34,7 +34,7 @@ function App() {
             </p>
             <p> Working with technology has always been my #1 hobby. From video games to databases to tinkering with handheld devices, 
               I've always loved the versatility that computers have to offer.
-              In my time in college and through work experiences such as my time in Americorps,
+              In my time in college and through work experiences such as my time with Blue Ridge Medical Center (Americorps),
               I've realized the importance of combining my passions and things I find important with my growing skillset.
               Much of my time now is spent on learning how to be effective in serving my community,
               engaging with my interests (sports, nutrition, games, etc.), and serving the organizations I am a part of.

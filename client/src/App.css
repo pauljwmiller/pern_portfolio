@@ -1,38 +1,27 @@
-* {
-  box-sizing: border-box;
-}
-
-/* base header style */
-.intro h2, .intro h3 {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: .15em solid black;
+/* Base header style for both desktop and mobile */
+.intro h1,
+.intro h2 {
   font-family: 'Courier New', monospace;
   margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
 }
 
-.intro h2 {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: .15em solid black;
+/* H1 typewriter animation */
+.intro h1 {
+  border-right: .15em solid black; /* cursor */
   width: 0;
-  margin: 0 auto;
-  animation: 
-    typing 2s steps(20, end) forwards,
-    blink-caret .75s step-end 3, /* blink 3 times */
-    hide-cursor 0s forwards 2s;
+  animation: typing 1.5s steps(20, end) forwards,
+             blink-caret .75s step-end 3,
+             hide-cursor 0s forwards 2s;
 }
 
 /* waits for H1 to finish */
-.intro h3 {
-  overflow: hidden;
-  white-space: nowrap;
+.intro h2 {
   border-right: .15em solid transparent;
-  width: 0;
-  margin: 0 auto;
-  animation: 
-    typing 2s steps(30, end) forwards 2s, 
-    blink-caret .75s step-end infinite 2s; 
+  width: 0ch;
+  animation: typing 1.5s steps(30, end) forwards 1.5s,
+             blink-caret .75s step-end infinite 2s;
 }
 
 @keyframes hide-cursor {
@@ -41,7 +30,7 @@
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 50ch }
 }
 
 @keyframes blink-caret {
@@ -53,6 +42,33 @@
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: black; }
+}
+
+/* Desktop: keep typewriter effect */
+@media (min-width: 768px) {
+  .intro h1,
+  .intro h2 {
+    white-space: nowrap;
+  }
+}
+
+/* Mobile: allow wrapping*/
+@media (max-width: 767px) {
+  .intro h1,
+  .intro h2 {
+    white-space: normal;
+    width: auto;
+    overflow: visible;
+    animation: none;
+    border-right: none;
+  }
+
+  .intro h1 {
+    font-size: clamp(2rem, 8vw, 3.2rem);
+  }
+  .intro h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
 }
 
 .portfolio {

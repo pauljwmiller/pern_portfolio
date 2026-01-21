@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const BALL_COUNT = 10;
+const BALL_COUNT = 12;
 
 export default function BouncingBallsCanvas() {
   const canvasRef = useRef(null);
